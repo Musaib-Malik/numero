@@ -1,5 +1,4 @@
 import random
-import math
 
 guessCount = 0
 maxGuesses = 5
@@ -33,14 +32,18 @@ while guessCount < maxGuesses and won!=True:
     # Main Logic   
     if guess != secretNumber:
         guessCount+=1
-        print(bsList[random.randint(0,4)])
+        print(f"\n{bsList[random.randint(0,4)]}\n")
+
     else:
         won=True 
         if guessCount == 1:
-            print("YOU WONN! BIG DICK ENERGY!")
+            print("\nYOU WONN! BIG DICK ENERGY!\n")
         elif guessCount == 2:
-            print("EHH, WHATEVER, BIG DEAL!")
+            print("\nEHH, WHATEVER, BIG DEAL!\n")
         else:
-            print(f"YOU SEEING THIS SHIT? THIS BITCH ACTUALLY TOOK {guessCount} GUESSES!")
+            print(f"\nYOU SEEING THIS SHIT? THIS BITCH ACTUALLY TOOK {guessCount} GUESSES!\n")
 
-
+if won==True:
+    print("YAYYYY YOU WON!!")
+else:
+    print("YOU'RE PATHETICCC!")
